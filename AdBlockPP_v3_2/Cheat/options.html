@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdBlock++ — Настройки</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header><img src="icon.png" width="40" height="40" alt=""><div>
+      <h1>AdBlock++</h1>
+      <p>Настройки обработки выделенного текста</p>
+    </div></header>
+    <section>
+      <h2>Подключение к OpenRouter</h2>
+      <label for="key">API-ключ</label>
+      <div class="line"><input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-or-v1-…"><button id="toggle" type="button">Показать</button></div>
+      <p class="hint">Ключ хранится локально в профиле браузера. Он не записывается в архив расширения. Используй новый ключ вместо ранее опубликованного.</p>
+      <div class="actions"><button id="save" class="primary">Сохранить</button><button id="test" type="button">Проверить ключ</button><button id="test-model" type="button">Проверить модель</button><button id="clear" type="button">Удалить ключ</button></div>
+      <div id="status" role="status" aria-live="polite"></div>
+    </section>
+    <section>
+      <h2>Модель</h2>
+      <code>nvidia/nemotron-3.5-lightning:free</code>
+      <p class="hint">Тест ключа проверяет авторизацию через OpenRouter, но не расходует генерацию. Тест модели отправляет один короткий запрос и учитывается в лимитах API.</p>
+    </section>
+    <section>
+      <h2>Быстрые действия</h2>
+      <p><kbd>Alt</kbd> + <kbd>X</kbd> — получить ответ по выделенному тексту и скопировать в буфер обмена.</p>
+      <p><kbd>Alt</kbd> + <kbd>Z</kbd> — получить ответ и показать его при наведении в правом нижнем углу.</p>
+      <p>Логи доступны при наведении в нижнем левом углу. Обе панели исчезают через 10 секунд после ответа. Буфер обмена не очищается.</p>
+      <p class="hint">Если сочетание занято системой, измени его на <code>chrome://extensions/shortcuts</code>. На внутренних страницах браузера расширения не запускаются.</p>
+    </section>
+    <footer>Выделенный текст передаётся OpenRouter и провайдеру модели по твоему запросу. Не отправляй конфиденциальную информацию.</footer>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

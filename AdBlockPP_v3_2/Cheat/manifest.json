@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "AdBlock++",
+  "version": "3.2.0",
+  "description": "Дополнительные инструменты для работы с текстом на веб-страницах.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "contextMenus",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://openrouter.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "AdBlock++ — настройки"
+  },
+  "options_page": "options.html",
+  "commands": {
+    "copy-ai-answer": {
+      "suggested_key": {
+        "default": "Alt+X"
+      },
+      "description": "Скопировать результат обработки текста"
+    },
+    "show-ai-answer": {
+      "suggested_key": {
+        "default": "Alt+Z"
+      },
+      "description": "Показать результат обработки текста"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
